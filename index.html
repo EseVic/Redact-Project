@@ -13,7 +13,7 @@
         <form action="" id="redaction-form">
             <div class="all-form">
                 <label for="text" id="original-text">Enter text to redact</label>
-                <input type="text" placeholder="Enter text " id="words-to-redact">
+                <input type="text" placeholder="Enter text " id="text-word">
             </div>
             <div class="all-form">
                 <label for="text" id="original-text">Words to redact (seperated by spaces):</label>
@@ -21,21 +21,24 @@
             </div>
             <div class="all-form">
                 <label for="text" id="original-text">Choose a replacement</label> <br>
-                <select name="Astericks" id="words-to-redact">
-                    <option value="Astericks">Astericks</option>
-                    <option value="Question">Question Marks</option>
-                    <option value="Dash">Dash</option>
-                    <option value="Underscore">Underscore</option>
+                <select name="" id="replacement-option">
+                    <option value="Astericks" id="astericks">Astericks</option>
+                    <option value="Question" id="question">Question Marks</option>
+                    <option value="Dash" id="dash">Dash</option>
+                    <option value="Underscore" id="underscore">Underscore</option>
                 </select> <br> <br>
                 <div class="all-form">
                     <button type="submit" id="btn2">Redact Now</button>
                     <button type="submit" id="btn">Reset form</button>
                 </div>
             </form>
-        <div id="replacement-option"></div>
-            <h2 id="redacted-content">REDACTED CONTENT</h2>
+            <div>
+            <h2 >REDACTED CONTENT</h2>
+            <p id="redacted-content"> </p>
             <H6 id="status">STATUS:</H6>
-            <!-- <P>Words scanned: Words redacted: Characters redacted: Time taken:</P> -->
+            <P>Words scanned: <span id="scanned">0</span> Words redacted: <span id="redat">0</span> 
+                Characters redacted: <span id="charRed">0</span>  Time taken: <span id="time">0.00</span></P>
+        </div>
         </div>
            
     <script src="redact.js"></script>
