@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () =>{
     const redat = document.getElementById('redat');
     const charRed = document.getElementById('charRed');
     const time = document.getElementById('time');
+    const resetButton = document.getElementById('btn')
 
     form.addEventListener('submit', (event) =>{
         event.preventDefault();
@@ -42,6 +43,14 @@ document.addEventListener('DOMContentLoaded', () =>{
         // status.textContent = `Words scanned: ${wordsScanned}, Words redacted: ${wordsRedacted}, Characters redacted: ${charactersRedacted}, Time taken: ${timeTaken} seconds`;
     });
 
+    resetButton.addEventListener('click', (event)=>{
+        event.preventDefault();
+        form.reset()
+        scanned.textContent = '0';
+        redat.textContent = '0';
+        charRed.textContent = '0';
+        time.textContent = '0.00';
+    })
     function redactText(text, words, replacement) {
         let redactedText = text;
         if(replacement == 'Dash')
