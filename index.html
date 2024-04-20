@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Text Redaction Tool</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Text Redaction Tool</h1>
+        <p>...Scramble some words from a body of text content</p>
+        <form action="" id="redaction-form">
+            <div class="all-form">
+                <label for="text" id="original-text">Enter text to redact</label>
+                <input type="text" placeholder="Enter text " id="words-to-redact">
+            </div>
+            <div class="all-form">
+                <label for="text" id="original-text">Words to redact (seperated by spaces):</label>
+                <input type="text" placeholder="Words to redact" id="words-to-redact">
+            </div>
+            <div class="all-form">
+                <label for="text" id="original-text">Choose a replacement</label> <br>
+                <select name="Astericks" id="words-to-redact">
+                    <option value="Astericks">Astericks</option>
+                    <option value="Question">Question Marks</option>
+                    <option value="Dash">Dash</option>
+                    <option value="Underscore">Underscore</option>
+                </select> <br> <br>
+                <div class="all-form">
+                    <button type="submit">Redact Now</button>
+                    <button type="submit">Reset form</button>
+                </div>
+            </form>
+        <div id="replacement-option"></div>
+            <h2 id="redacted-content">REDACTED CONTENT</h2>
+            <H6 id="status">STATUS:</H6>
+            <!-- <P>Words scanned: Words redacted: Characters redacted: Time taken:</P> -->
+        </div>
+           
+    <script src="redact.js"></script>
+</body>
+</html>
